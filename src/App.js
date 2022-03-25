@@ -17,17 +17,7 @@ function App() {
                             <li>1 กันยายน = 2,024 orders</li>
                         </ul>
                     </Box>
-                    <Box title='ยอดขายสินค้ายอดนิยม'>
-                        <ol>
-                            <li>carrot ~ 200,000bath</li>
-                            <li>tomato ~ 120,000bath</li>
-                            <li>cucumber ~ 100,500bath</li>
-                        </ol>
-                    </Box>
-                    <Box title='Quote of the day'>
-                        <p>แค่อยากจะบอกว่ารัก แต่เธอไม่ต้องมารัก</p>
-                        <p>by 1.2.3</p>
-                    </Box>
+                    
                 </Grid>
             </div>
         </section>
