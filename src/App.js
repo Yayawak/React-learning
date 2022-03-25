@@ -11,7 +11,7 @@ function App() {
             <AppHeader />
             <Routes>
                 <Route path='/' element={<PageHome />} exact/>
-                <Route path='/about' element={<PageAbout />} />   
+                <Route path='about/*' element={<PageAbout />} />   
                 <Route path='*' element={<Page404 />} />
             </Routes>
         </div>
