@@ -2,6 +2,7 @@ import './App.css';
 import AppHeader from './AppHeader';
 import PageHome from './PageHome';
 import PageAbout from './PageAbout';
+import PagePost from './PagePost'
 import Page404 from './Page404';
 import { Routes, Route} from 'react-router-dom';
 
@@ -11,7 +12,8 @@ function App() {
             <AppHeader />
             <Routes>
                 <Route path='/' element={<PageHome />} exact/>
-                <Route path='about/*' element={<PageAbout />} />   
+                <Route path='about/*' element={<PageAbout />} />
+                <Route path='/post/:postId'  element={<PagePost />}/>
                 <Route path='*' element={<Page404 />} />
             </Routes>
         </div>
