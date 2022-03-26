@@ -1,24 +1,29 @@
-import './App.css';
-import AppHeader from './AppHeader';
-import PageHome from './PageHome';
-import PageAbout from './PageAbout';
-import PagePost from './PagePost'
-import Page404 from './Page404';
-import { Routes, Route} from 'react-router-dom';
-
+import { useState } from 'react';
+import BoxInput from './BoxInput';
+import BoxOutput from './BoxOutput';
+import styled from 'styled-components';
 function App() {
+    const [ bmi, setBmi ] = useState(null);
     return (
-        <div>
-            <AppHeader />
-            <Routes>
-                <Route path='/' element={<PageHome />} exact/>
-                <Route path='about/*' element={<PageAbout />} />
-                <Route path='/post/:postId'  element={<PagePost />}/>
-                <Route path='*' element={<Page404 />} />
-            </Routes>
-        </div>
+        <AppSection>
+            <AppContainer>
+                <h2>เว็พแอพคำนวณ BMI</h2>
+                <BoxInput onCalculateBmi={setBmi} />
+                <BoxOutput bmi={bmi} />
+            </AppContainer>
+        </AppSection>
         
     );
 }
+
+const AppSection = styled.section`
+    padding: 20px;
+`;
+
+const AppContainer = styled.section`
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+`;
 
 export default App;
